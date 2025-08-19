@@ -42,9 +42,8 @@ const Index = () => {
             image={latestBookCover}
             status="latest"
             releaseDate="March 2024"
-            amazonLink="https://www.amazon.com/dp/example"
-            goodreadsLink="https://www.goodreads.com/book/show/example"
-            flipkartLink="https://www.flipkart.com/example"
+            amazonLink="https://www.amazon.in/Midnight-Garden-Novel-Elaine-Roth/dp/1662513038"
+            goodreadsLink="https://www.goodreads.com/book/show/143381248-the-midnight-garden"
           />
         </div>
       </section>
@@ -76,24 +75,26 @@ const Index = () => {
       <TestimonialsSection />
 
       {/* Newsletter Section */}
-      <section id="contact" className="py-20 bg-primary text-primary-foreground">
+      <section
+        id="contact"
+        className="py-20 bg-primary text-primary-foreground"
+      >
         <div className="container mx-auto px-6 text-center">
           <div className="max-w-2xl mx-auto space-y-6">
             <h2 className="font-display text-3xl md:text-4xl font-bold">
               Stay Connected
             </h2>
             <p className="text-lg opacity-90">
-              Be the first to know about new releases, book events, and exclusive content.
+              Be the first to know about new releases, book events, and
+              exclusive content.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-md text-primary bg-primary-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent"
-              />
-              <button className="px-6 py-3 bg-accent text-accent-foreground rounded-md font-medium hover:bg-accent/90 transition-smooth">
-                Subscribe
-              </button>
+            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto justify-center items-center">
+              <a
+                href="mailto:prabal2535@gmail.com?subject=Message from your website"
+                className="inline-block px-6 py-3 bg-accent text-accent-foreground rounded-md font-medium text-center hover:bg-accent/90 transition-smooth"
+              >
+                Message Me
+              </a>
             </div>
           </div>
         </div>
@@ -106,10 +107,16 @@ const Index = () => {
             © 2024 Sarah Mitchell. All rights reserved.
           </p>
           <div className="flex justify-center gap-6 mt-4">
-            <a href="#" className="text-muted-foreground hover:text-primary transition-smooth">
+            <a
+              href="#"
+              className="text-muted-foreground hover:text-primary transition-smooth"
+            >
               Privacy Policy
             </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-smooth">
+            <a
+              href="#"
+              className="text-muted-foreground hover:text-primary transition-smooth"
+            >
               Contact
             </a>
           </div>

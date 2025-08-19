@@ -9,7 +9,7 @@ const NewReleasePopup = () => {
     // Show popup after a short delay
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 1500);
+    });
 
     return () => clearTimeout(timer);
   }, []);
