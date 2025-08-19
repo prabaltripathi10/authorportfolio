@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import NewReleasePopup from "@/components/NewReleasePopup";
 import { AuthorHero } from "@/components/AuthorHero";
 import { AboutSection } from "@/components/AboutSection";
 import { BookCard } from "@/components/BookCard";
@@ -11,6 +12,9 @@ const Index = () => {
     <main className="min-h-screen">
       {/* Navigation */}
       <Navbar />
+
+      {/* New Release Popup */}
+      <NewReleasePopup />
 
       {/* Hero Section */}
       <section id="home">
