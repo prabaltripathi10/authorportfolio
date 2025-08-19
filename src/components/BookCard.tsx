@@ -59,45 +59,52 @@ export function BookCard({
           </div>
 
           {/* Purchase Buttons */}
-          <div className="flex flex-wrap gap-3">
+          <div className="space-y-4">
+            {/* Primary Buy Now Button */}
             {amazonLink && (
-              <Button
-                variant="purchase"
-                asChild
-                className="group/btn"
-              >
-                <a href={amazonLink} target="_blank" rel="noopener noreferrer">
-                  <span>Amazon</span>
-                  <ExternalLink className="w-4 h-4 ml-2 transition-smooth group-hover/btn:translate-x-1" />
-                </a>
-              </Button>
+              <div className="mb-4">
+                <Button
+                  variant="hero"
+                  size="lg"
+                  asChild
+                  className="w-full text-lg group/btn"
+                >
+                  <a href={amazonLink} target="_blank" rel="noopener noreferrer">
+                    <span>Buy Now - {status === 'upcoming' ? 'Pre-order' : '$24.99'}</span>
+                    <ExternalLink className="w-5 h-5 ml-2 transition-smooth group-hover/btn:translate-x-1" />
+                  </a>
+                </Button>
+              </div>
             )}
-            
-            {goodreadsLink && (
-              <Button
-                variant="outline"
-                asChild
-                className="group/btn"
-              >
-                <a href={goodreadsLink} target="_blank" rel="noopener noreferrer">
-                  <span>Goodreads</span>
-                  <ExternalLink className="w-4 h-4 ml-2 transition-smooth group-hover/btn:translate-x-1" />
-                </a>
-              </Button>
-            )}
-            
-            {flipkartLink && (
-              <Button
-                variant="secondary"
-                asChild
-                className="group/btn"
-              >
-                <a href={flipkartLink} target="_blank" rel="noopener noreferrer">
-                  <span>Flipkart</span>
-                  <ExternalLink className="w-4 h-4 ml-2 transition-smooth group-hover/btn:translate-x-1" />
-                </a>
-              </Button>
-            )}
+
+            {/* Alternative Purchase Options */}
+            <div className="flex flex-wrap gap-3">
+              {goodreadsLink && (
+                <Button
+                  variant="outline"
+                  asChild
+                  className="group/btn flex-1 min-w-[120px]"
+                >
+                  <a href={goodreadsLink} target="_blank" rel="noopener noreferrer">
+                    <span>Goodreads</span>
+                    <ExternalLink className="w-4 h-4 ml-2 transition-smooth group-hover/btn:translate-x-1" />
+                  </a>
+                </Button>
+              )}
+              
+              {flipkartLink && (
+                <Button
+                  variant="secondary"
+                  asChild
+                  className="group/btn flex-1 min-w-[120px]"
+                >
+                  <a href={flipkartLink} target="_blank" rel="noopener noreferrer">
+                    <span>Flipkart</span>
+                    <ExternalLink className="w-4 h-4 ml-2 transition-smooth group-hover/btn:translate-x-1" />
+                  </a>
+                </Button>
+              )}
+            </div>
           </div>
         </div>
       </div>

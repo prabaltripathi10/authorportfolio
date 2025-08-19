@@ -1,20 +1,29 @@
+import Navbar from "@/components/Navbar";
 import { AuthorHero } from "@/components/AuthorHero";
 import { AboutSection } from "@/components/AboutSection";
 import { BookCard } from "@/components/BookCard";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import latestBookCover from "@/assets/latest-book.jpg";
 import upcomingBookCover from "@/assets/upcoming-book.jpg";
 
 const Index = () => {
   return (
     <main className="min-h-screen">
+      {/* Navigation */}
+      <Navbar />
+
       {/* Hero Section */}
-      <AuthorHero />
+      <section id="home">
+        <AuthorHero />
+      </section>
 
       {/* About Section */}
-      <AboutSection />
+      <section id="about">
+        <AboutSection />
+      </section>
 
-      {/* Latest Release */}
-      <section className="py-20 bg-background">
+      {/* Books Section */}
+      <section id="books" className="py-20 bg-background">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-primary mb-4">
@@ -59,8 +68,11 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <TestimonialsSection />
+
       {/* Newsletter Section */}
-      <section className="py-20 bg-primary text-primary-foreground">
+      <section id="contact" className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-6 text-center">
           <div className="max-w-2xl mx-auto space-y-6">
             <h2 className="font-display text-3xl md:text-4xl font-bold">
